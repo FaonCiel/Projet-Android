@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Projet</string>
+    <string name="lancer_activitee_saisie">Button</string>
+    <string name="saisir_un_livre">Saisir un Livre</string>
+    <string name="voir_les_livres">Voir les livres</string>
+</resources>

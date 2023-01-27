@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/B"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_ajouter_un_livre">
+
+    <EditText
+        android:id="@+id/editText_Titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:onClick="lancer_MainActivity"
+        android:text="Titre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_Auteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:onClick="lancer_MainActivity"
+        android:text="Auteur"
+        app:layout_constraintStart_toStartOf="@+id/editText_Titre"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Titre" />
+
+    <EditText
+        android:id="@+id/editText_NbPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:onClick="lancer_MainActivity"
+        android:text="Pages ? (ex 2, 3, 540 etc ..)"
+        app:layout_constraintStart_toStartOf="@+id/editText_Auteur"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Auteur" />
+
+    <EditText
+        android:id="@+id/editText_Editeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:onClick="lancer_MainActivity"
+        android:text="Editeur"
+        app:layout_constraintStart_toStartOf="@+id/editText_NbPage"
+        app:layout_constraintTop_toBottomOf="@+id/editText_NbPage" />
+
+    <EditText
+        android:id="@+id/editText_Prix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:onClick="lancer_MainActivity"
+        android:text="Prix"
+        app:layout_constraintStart_toStartOf="@+id/editText_Editeur"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Editeur" />
+
+    <Button
+        android:id="@+id/button_Retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="82dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="lancer_MainActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
