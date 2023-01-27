@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView3);
         addtotheDB(textView);
-        getfromtheDB(textView);
+        //getfromtheDB(textView);
+
     }
 
     public void lancer_activitee_saisie(View view) {
@@ -36,10 +37,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void getfromtheDB (View view) {
         ServeurSQLite serveurSQLite = new ServeurSQLite(this);
+
         List<Livre> livres = serveurSQLite.getLivres();
         TextView textView = findViewById(R.id.textView3);
+        textView.clearComposingText();
         for (Livre livre : livres) {
-            textView.setText(livre.toString());
+            textView.append(livre.toString());
         }
     }
     public void addtotheDB (TextView textView) {
@@ -48,18 +51,24 @@ public class MainActivity extends AppCompatActivity {
             if (intent == null) {
                 textView.setText("Pas de livre");
             }
+            else {
+                String titre = intent.getStringExtra("titre");
+                String auteur = intent.getStringExtra("auteur");
+                String pages = intent.getStringExtra("pages");
+                String editeur = intent.getStringExtra("editeur");
+                String prix = intent.getStringExtra("prix");
 
-            String titre = intent.getStringExtra("titre");
-            String auteur = intent.getStringExtra("auteur");
-            String pages = intent.getStringExtra("pages");
-            String editeur = intent.getStringExtra("editeur");
-            String prix = intent.getStringExtra("prix");
+                Livre livre = new Livre(titre, auteur, pages, editeur, prix);
 
-            Livre livre = new Livre(titre, auteur, pages, editeur, prix);
+                ServeurSQLite serveurSQLite = new ServeurSQLite(this);
+                serveurSQLite.ajouter_livre(livre);
 
-            ServeurSQLite serveurSQLite = new ServeurSQLite(this);
-            serveurSQLite.ajouter_livre(livre);
+            }
+    }
 
+    public void lancer_activitee_afficher(View view) {
+        Intent intent = new Intent(this, Activity_all_livre.class);
+        startActivity(intent);
     }
 
 }

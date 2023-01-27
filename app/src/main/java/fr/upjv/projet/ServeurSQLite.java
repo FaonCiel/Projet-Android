@@ -40,19 +40,32 @@ public class ServeurSQLite extends SQLiteOpenHelper {
     public List<Livre> getLivres() {
         SQLiteDatabase db = this.getReadableDatabase();
         String requete = "SELECT * FROM " + TABLE_NAME + ";";
-        Cursor cursor = db.rawQuery(requete, null);
 
-        List<Livre> ListeLivre = new ArrayList<Livre>();
-
-        if (cursor.moveToFirst()) {
-            do {
-                Livre livre = new Livre(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5));
-                ListeLivre.add(livre);
-            } while (cursor.moveToNext());
+        if (requete == null) {
+            return null;
         }
-        cursor.close();
-        db.close();
-        return (ListeLivre);
+        else{
+            Cursor cursor = db.rawQuery(requete, null);
 
+
+            List<Livre> ListeLivre = new ArrayList<Livre>();
+
+            if (cursor.moveToFirst()) {
+                do {
+                    Livre livre = new Livre(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5));
+                    ListeLivre.add(livre);
+                } while (cursor.moveToNext());
+            }
+            cursor.close();
+            db.close();
+            return (ListeLivre);
+        }
+    }
+
+    public void clearDB() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String requete = "DELETE FROM " + TABLE_NAME + ";";
+        db.execSQL(requete);
+        db.close();
     }
 }

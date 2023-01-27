@@ -17,7 +17,6 @@ public class Livre {
     }
 
 
-
     public String getTitre() {
         return titre;
     }
@@ -61,11 +60,11 @@ public class Livre {
     @Override
     public String toString() {
         return "Livre{" +
-                "titre='" + titre + '\'' +
-                ", Auteur='" + Auteur + '\'' +
-                ", pages='" + pages + '\'' +
-                ", editeur='" + editeur + '\'' +
-                ", prix='" + prix + '\'' +
+                "titre='" + titre +
+                ", Auteur='" + Auteur +
+                ", pages='" + pages +
+                ", editeur='" + editeur +
+                ", prix='" + prix +
                 '}';
     }
 }
