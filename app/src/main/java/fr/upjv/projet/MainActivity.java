@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,24 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView3);
-
-        try {
-            Intent intent = getIntent();
-            String titre = intent.getStringExtra("titre");
-            String auteur = intent.getStringExtra("auteur");
-            String pages = intent.getStringExtra("pages");
-            String editeur = intent.getStringExtra("editeur");
-            String prix = intent.getStringExtra("prix");
-
-            Livre livre = new Livre(titre, auteur, pages, editeur, prix);
-            textView.setText(livre.toString());
-
-        } catch (Exception e) {
-            textView.setText("Pas de livre");
-        }
-
-
-
+        addtotheDB(textView);
+        getfromtheDB(textView);
     }
 
     public void lancer_activitee_saisie(View view) {
@@ -45,10 +33,33 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
+    }
+    public void getfromtheDB (View view) {
+        ServeurSQLite serveurSQLite = new ServeurSQLite(this);
+        List<Livre> livres = serveurSQLite.getLivres();
+        TextView textView = findViewById(R.id.textView3);
+        for (Livre livre : livres) {
+            textView.setText(livre.toString());
+        }
+    }
+    public void addtotheDB (TextView textView) {
 
+            Intent intent = getIntent();
+            if (intent == null) {
+                textView.setText("Pas de livre");
+            }
 
+            String titre = intent.getStringExtra("titre");
+            String auteur = intent.getStringExtra("auteur");
+            String pages = intent.getStringExtra("pages");
+            String editeur = intent.getStringExtra("editeur");
+            String prix = intent.getStringExtra("prix");
 
+            Livre livre = new Livre(titre, auteur, pages, editeur, prix);
 
+            ServeurSQLite serveurSQLite = new ServeurSQLite(this);
+            serveurSQLite.ajouter_livre(livre);
 
     }
+
 }
