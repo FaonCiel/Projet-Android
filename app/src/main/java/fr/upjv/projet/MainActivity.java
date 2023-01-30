@@ -18,23 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView3);
-        addtotheDB(textView);
+        //addtotheDB(textView);
         //getfromtheDB(textView);
 
     }
-
     public void lancer_activitee_saisie(View view) {
 
         Intent intent = new Intent(this, Activity_ajouter_un_livre.class);
         startActivity(intent);
     }
 
-    public void lancer_MainActivity(View view) {
-
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-
-    }
     public void getfromtheDB (View view) {
         ServeurSQLite serveurSQLite = new ServeurSQLite(this);
 

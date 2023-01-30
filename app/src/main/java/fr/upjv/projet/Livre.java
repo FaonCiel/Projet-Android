@@ -15,8 +15,6 @@ public class Livre {
         this.editeur = editeur;
         this.prix = prix;
     }
-
-
     public String getTitre() {
         return titre;
     }

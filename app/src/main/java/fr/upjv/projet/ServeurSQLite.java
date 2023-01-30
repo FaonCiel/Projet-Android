@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ServeurSQLite extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "livres.db";
+    private static final String DATABASE_NAME = "livres.sqlite";
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_NAME = "livres";
     private static final String COLONNE_ID = "id";
@@ -29,14 +29,12 @@ public class ServeurSQLite extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE " + TABLE_NAME + ";");
         onCreate(db);
     }
-
     public void ajouter_livre(Livre livre) {
         SQLiteDatabase db = this.getWritableDatabase();
         String requete = "INSERT INTO " + TABLE_NAME + " (" + COLONNE_TITRE + ", " + COLONNE_AUTEUR + ", " + COLONNE_PAGES + ", " + COLONNE_EDITEUR + ", " + COLONNE_PRIX + ") VALUES ('" + livre.getTitre() + "', '" + livre.getAuteur() + "', '" + livre.getPages() + "', '" + livre.getEditeur() + "', '" + livre.getPrix() + "');";
         db.execSQL(requete);
         db.close();
     }
-
     public List<Livre> getLivres() {
         SQLiteDatabase db = this.getReadableDatabase();
         String requete = "SELECT * FROM " + TABLE_NAME + ";";
@@ -61,7 +59,6 @@ public class ServeurSQLite extends SQLiteOpenHelper {
             return (ListeLivre);
         }
     }
-
     public void clearDB() {
         SQLiteDatabase db = this.getWritableDatabase();
         String requete = "DELETE FROM " + TABLE_NAME + ";";
