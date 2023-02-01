@@ -18,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView3);
-        //addtotheDB(textView);
+        //clearDB();
+        addtotheDB(textView);
+
+
         //getfromtheDB(textView);
 
     }
@@ -27,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Activity_ajouter_un_livre.class);
         startActivity(intent);
     }
-
+    public void clearDB() {
+        ServeurSQLite serveurSQLite = new ServeurSQLite(this);
+        serveurSQLite.clearDB();
+    }
     public void getfromtheDB (View view) {
         ServeurSQLite serveurSQLite = new ServeurSQLite(this);
 
@@ -41,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void addtotheDB (TextView textView) {
 
             Intent intent = getIntent();
-            if (intent == null) {
+            if (intent.getStringExtra("titre") == null) {
                 textView.setText("Pas de livre");
             }
             else {

@@ -13,11 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
+        android:hint="Titre"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:onClick="lancer_MainActivity"
-        android:text="Titre"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,10 +28,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
         android:ems="10"
+        android:hint="Auteur"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:onClick="lancer_MainActivity"
-        android:text="Auteur"
         app:layout_constraintStart_toStartOf="@+id/editText_Titre"
         app:layout_constraintTop_toBottomOf="@+id/editText_Titre" />
 
@@ -40,10 +41,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
+        android:hint="NbPages"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:onClick="lancer_MainActivity"
-        android:text="Pages ? (ex 2, 3, 540 etc ..)"
         app:layout_constraintStart_toStartOf="@+id/editText_Auteur"
         app:layout_constraintTop_toBottomOf="@+id/editText_Auteur" />
 
@@ -53,10 +54,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
         android:ems="10"
+        android:hint="Editeur"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:onClick="lancer_MainActivity"
-        android:text="Editeur"
         app:layout_constraintStart_toStartOf="@+id/editText_NbPage"
         app:layout_constraintTop_toBottomOf="@+id/editText_NbPage" />
 
@@ -64,12 +65,12 @@
         android:id="@+id/editText_Prix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
+        android:hint="Prix"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:onClick="lancer_MainActivity"
-        android:text="Prix"
         app:layout_constraintStart_toStartOf="@+id/editText_Editeur"
         app:layout_constraintTop_toBottomOf="@+id/editText_Editeur" />
 
