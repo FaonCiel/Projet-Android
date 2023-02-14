@@ -16,11 +16,12 @@ public class LivreHolder extends RecyclerView.ViewHolder {
 
     public LivreHolder(@NonNull View itemView) {
         super(itemView);
-    textView_Titre = itemView.findViewById(R.id.textView_Titre);
-    textView_Auteur = itemView.findViewById(R.id.textView_Auteur);
-    textView_Editeur = itemView.findViewById(R.id.textView_Editeur);
-    textView_Prix = itemView.findViewById(R.id.textView_Prix);
-    textView_Pages = itemView.findViewById(R.id.textView_pages);
+    textView_Titre = itemView.findViewById(R.id.id_textview_titre);
+    textView_Auteur = itemView.findViewById(R.id.id_textview_auteur);
+    textView_Editeur = itemView.findViewById(R.id.id_textview_editeur);
+    textView_Prix = itemView.findViewById(R.id.id_textview_prix);
+    textView_Pages = itemView.findViewById(R.id.id_textview_page);
+
     }
     public void mettreAjourLigne(Livre unLivre) {
         textView_Titre.setText(unLivre.getTitre());
