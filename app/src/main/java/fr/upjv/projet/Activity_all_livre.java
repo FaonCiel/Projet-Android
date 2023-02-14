@@ -37,4 +37,11 @@ public class Activity_all_livre extends AppCompatActivity {
 
     }
 
+    public void clear(){
+        monRecyclerView.removeAllViews();
+        ServeurSQLite serveurSQLite = new ServeurSQLite(this);
+        serveurSQLite.clearDB();
+    }
+
+
 }

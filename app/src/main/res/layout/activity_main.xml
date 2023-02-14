@@ -9,54 +9,63 @@
 
     <Button
         android:id="@+id/lancer_activitee_voir_livre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="46dp"
+        android:layout_width="199dp"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-black"
         android:onClick="lancer_activitee_afficher"
         android:text="@string/voir_les_livres"
+        android:textSize="24sp"
+        app:backgroundTint="#05BB8C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lancer_activitee_saisie" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="37dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="@+id/lancer_activitee_voir_livre"
+    <Button
+        android:id="@+id/lancer_activitee_saisie"
+        android:layout_width="196dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginBottom="58dp"
+        android:fontFamily="sans-serif-black"
+        android:onClick="lancer_activitee_saisie"
+        android:text="@string/saisir_un_livre"
+        android:textSize="24sp"
+        app:backgroundTint="#05BB8C"
+        app:layout_constraintBottom_toTopOf="@+id/lancer_activitee_voir_livre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="21dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/lancer_activitee_saisie"
-        app:layout_constraintEnd_toEndOf="@+id/lancer_activitee_saisie" />
-
-    <Button
-        android:id="@+id/lancer_activitee_saisie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:onClick="lancer_activitee_saisie"
-        android:text="@string/saisir_un_livre"
-        app:layout_constraintBottom_toBottomOf="@+id/lancer_activitee_voir_livre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/lancer_activitee_voir_livre" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="232dp"
-        android:layout_height="306dp"
-        android:layout_marginTop="67dp"
-        android:text="TextView"
+        android:layout_width="222dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="588dp"
+        android:fontFamily="sans-serif-black"
+        android:text="JavaBook"
+        android:textColor="#5BBD8C"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lancer_activitee_saisie" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#05BA8B"
+        android:fontFamily="sans-serif-black"
+        android:text="Cabak David - Limpalaer Cyril"
+        android:textAlignment="center"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

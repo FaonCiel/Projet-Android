@@ -94,4 +94,14 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="add_a_book">Ajouter un livre</string>
+    <string name="title">Titre</string>
+    <string name="author">Autheur</string>
+    <string name="editor">Editeur</string>
+    <string name="number_of_pages">Nombre de page</string>
+    <string name="price">Prix</string>
+    <string name="add">Valider</string>
+
+
+
 </resources>

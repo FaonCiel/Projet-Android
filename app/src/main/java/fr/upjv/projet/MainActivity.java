@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textView = findViewById(R.id.textView3);
-        //clearDB();
-        addtotheDB(textView);
+
+       addtotheDB();
+
 
 
         //getfromtheDB(textView);
@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
             textView.append(livre.toString());
         }
     }
-    public void addtotheDB (TextView textView) {
+    public void addtotheDB () {
 
             Intent intent = getIntent();
             if (intent.getStringExtra("titre") == null) {
-                textView.setText("Pas de livre");
+
             }
             else {
                 String titre = intent.getStringExtra("titre");
