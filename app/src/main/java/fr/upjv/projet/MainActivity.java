@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //getfromtheDB(textView);
+
 
     }
     public void lancer_activitee_saisie(View view) {

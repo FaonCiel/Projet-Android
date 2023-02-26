@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class LivreAdapter extends RecyclerView.Adapter<LivreHolder> {
-    private List<Livre> lesLivres;
+    private final List<Livre> lesLivres;
 
     public LivreAdapter(List<Livre> lesLivres) {
         this.lesLivres = lesLivres;

@@ -31,17 +31,13 @@ public class Activity_all_livre extends AppCompatActivity {
 
 
         ServeurSQLite serveurSQLite = new ServeurSQLite(this);
-       // leslivres.addAll(serveurSQLite.getLivres());
+
         leslivres.addAll(serveurSQLite.getLivres());
         monAdapter = new LivreAdapter(leslivres);
 
     }
 
-    public void clear(){
-        monRecyclerView.removeAllViews();
-        ServeurSQLite serveurSQLite = new ServeurSQLite(this);
-        serveurSQLite.clearDB();
-    }
+
 
 
 }

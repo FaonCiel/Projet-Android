@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class LivreHolder extends RecyclerView.ViewHolder {
 
-    private TextView textView_Titre;
-    private TextView textView_Auteur;
-    private TextView textView_Editeur;
-    private TextView textView_Pages;
-    private TextView textView_Prix;
+    private final TextView textView_Titre;
+    private final TextView textView_Auteur;
+    private final TextView textView_Editeur;
+    private final TextView textView_Pages;
+    private final TextView textView_Prix;
 
     public LivreHolder(@NonNull View itemView) {
         super(itemView);

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Projet</string>
-    <string name="lancer_activitee_saisie">Button</string>
+    <string name="lancer_activitee_saisie">Saisir</string>
     <string name="saisir_un_livre">Saisir un Livre</string>
     <string name="voir_les_livres">Voir les livres</string>
     <string name="add_a_book">Ajouter un livre</string>
     <string name="title">Titre</string>
-    <string name="author">Autheur</string>
+    <string name="author">Auteur</string>
     <string name="editor">Editeur</string>
     <string name="number_of_pages">Nombre de page</string>
     <string name="price">Prix</string>
     <string name="add">Valider</string>
+    <string name="title_activity_all_livre">Tout les Livres</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="javabook">JavaBook</string>
 </resources>
